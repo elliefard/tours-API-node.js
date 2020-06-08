@@ -1,0 +1,50 @@
+extends baseOne
+
+block content
+  div.cards
+    .cards__card-container
+      each tour in tours
+      
+        .cards__card
+          .cards__card__header
+            .cards__card__picture
+              .cards__card__picture-overlay &nbsp;
+              img.cards__card__picture-img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.name}`)
+            //- h3.cards__heading-tertirary
+            //-   span= tour.name
+          .cards__card-heading-one
+            h3.cards__card__sub-heading-main= tour.name
+          .cards__card__details
+            //- h3.cards__card__sub-heading-main= tour.name
+            h4.cards__card__sub-heading= `${tour.difficulty} ${tour.duration}-day tour`
+            //- p.cards__card__text= tour.summary
+            .cards__card__data
+              svg.cards__card__icon
+                use(xlink:href='/img/icons.svg#icon-map-pin')
+              span= tour.startLocation.description
+            .cards__card__data
+              svg.cards__card__icon
+                use(xlink:href='/img/icons.svg#icon-calendar')
+              span= tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric'})
+            .cards__card__data
+              svg.cards__card__icon
+                use(xlink:href='/img/icons.svg#icon-flag')
+              span= `${tour.locations.length} stops`
+            .cards__card__data
+              svg.cards__card__icon
+                use(xlink:href='/img/icons.svg#icon-user')
+              span= `${tour.maxGroupSize} people`
+
+          .cards__card__footer
+            p
+              span.cards__card__footer-value= `$${tour.price}`
+              | 
+              span.cards__card__footer-text per person
+            p.cards__card__ratings
+              span.cards__card__footer-value= tour.ratingsAverage
+              | 
+              span.cards__card__footer-text= `rating (${tour.ratingsQuantity})`
+            
+            a.btn.btn--green.btn--small(href=`/tour/${tour.slug}`) Details
+            //- button.btn.btn--green add
+            //- a.btn.btn--green.btn--small(href='/') Add
