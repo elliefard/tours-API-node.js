@@ -1078,10 +1078,6 @@ body {
     text-shadow: 0 0.7rem 1rem black; }
   .headerOne__nav__el:not(:last-child) {
     margin-right: 3rem; }
-  @media only screen and (max-width: 37.5em) {
-    .headerOne__nav__el:not(:last-child) {
-      margin-right: 0;
-      margin-bottom: 1.2rem; } }
   .headerOne__nav--user {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 40%;
