@@ -119,12 +119,7 @@
 &__nav__el:not(:last-child) {
   margin-right: 3rem;
 }
-@media only screen and (max-width: 37.5em) {
-  &__nav__el:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 1.2rem;
-  }
-}
+
 &__nav--user {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 40%;
