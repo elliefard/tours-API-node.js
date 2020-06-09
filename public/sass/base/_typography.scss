@@ -40,6 +40,41 @@ body {
         }
     }
 }
+
+
+.heading-primary-two{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .heading-primary-two span{
+    padding: 1rem 1.5rem;
+    line-height: 1;
+    font-size: 5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      from(rgba(55, 151, 164, 0.85)),
+      to(rgba(140, 203, 190, 0.85))
+    );
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(55, 151, 164, 0.85),
+      rgba(140, 203, 190, 0.85)
+    );
+    @include respond(phone) {
+        padding: .5rem 1.5rem;
+        font-size: 3rem;
+        font-family: 5rem;
+        margin-bottom: 6rem;
+    }
+  }
+
+
+
 .alert {
     position: fixed;
     top: 0;
@@ -82,7 +117,25 @@ body {
     @include respond(phone) {
         font-size: 2.5rem;
     }
+        &--small{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
 
+    @include respond(tab-port) {
+        font-size: 2.5rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.3rem;
+    }
+}
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
