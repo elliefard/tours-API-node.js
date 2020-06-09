@@ -682,11 +682,6 @@
     border-radius: 2rem;
     -webkit-box-shadow: 0 3rem 8rem 0.5rem rgba(0, 0, 0, 0.15);
     box-shadow: 0 3rem 8rem 0.5rem rgba(0, 0, 0, 0.15);
-
-    @include respond(phone) {
-      padding: 23rem 5rem 23rem 21rem;
-  }
-
   }
   .cta__img {
     height: 15rem;
@@ -698,68 +693,52 @@
     -webkit-box-shadow: 1rem 0.5rem 3rem rgba(0, 0, 0, 0.15);
     box-shadow: 1rem 0.5rem 3rem rgba(0, 0, 0, 0.15);
 
-      &--logo {
-        padding: 2rem;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        background: -webkit-gradient(
-          linear,
-          left top,
-          right bottom,
-          from(#3797a4),
-          to(#28b487)
-        );
-        background: linear-gradient(to right bottom, #3797a4, #8ccbbe);
-        z-index: 10;
-        -webkit-transform: translate(-35%, -50%);
-        transform: translate(-35%, -50%);
-      }
-          &--logo img {
-        width: 100%;
-      }
-    &--1 {
-        -webkit-transform: translate(-10%, -50%) scale(0.97);
-        transform: translate(-10%, -50%) scale(0.97);
-        z-index: 9;
-      }
-    &--2 {
-        -webkit-transform: translate(15%, -50%) scale(0.94);
-        transform: translate(15%, -50%) scale(0.94);
-        z-index: 8;
-      }
-      @include respond(phone) {
-        height: 0rem;
-        width: 0rem;
-    }
-     
-  
+  &--logo {
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      from(#3797a4),
+      to(#28b487)
+    );
+    background: linear-gradient(to right bottom, #3797a4, #8ccbbe);
+    z-index: 10;
+    -webkit-transform: translate(-35%, -50%);
+    transform: translate(-35%, -50%);
+  }
+ &--logo img {
+    width: 100%;
+  }
+&--1 {
+    -webkit-transform: translate(-10%, -50%) scale(0.97);
+    transform: translate(-10%, -50%) scale(0.97);
+    z-index: 9;
+  }
+&--2 {
+    -webkit-transform: translate(15%, -50%) scale(0.94);
+    transform: translate(15%, -50%) scale(0.94);
+    z-index: 8;
+  }
 }
   .cta__content {
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
     grid-gap: 0.7rem;
     grid-auto-flow: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
-    @include respond(phone) {
-      position: absolute;
-      left: 10%;
-      top: 5%;
-      bottom: 5%;
-      padding: 0rem;
-      
-  }
-
   }
   .cta__text {
     font-size: 1.9rem;
