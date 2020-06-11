@@ -12,6 +12,7 @@
     "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
     "compile:sass": "node-sass ./public/sass/main.scss ./public/css/style.css"
   },
+  
   "author": "Ellie Fard",
   "license": "ISC",
   "dependencies": {
