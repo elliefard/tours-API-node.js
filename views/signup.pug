@@ -1,0 +1,23 @@
+extends baseOne
+
+block content
+  main.main
+    .signup-form
+      h2.heading-secondary--small.ma-bt-lg PLEASE SIGN UP
+      form.form.form--signup
+        .form__group
+          label.form__label(for='name') Name
+          input#name.form__input(type='text', placeholder='Ellie Fard')
+        .form__group
+          label.form__label(for='email') Email Address
+          input#email.form__input(type='email', placeholder='you@example.com')
+        .form__group.ma-bt-md
+          label.form__label(for='password') Password
+          input#password.form__input(type='password', placeholder='••••••••', required, minlength='1')
+        .form__group.ma-bt-md
+          label.form__label(for='passwordConfirm') Password Confirm
+          input#password-confirm.form__input(type='password', placeholder='••••••••', required, minlength='1')
+        .form__group
+          button.btn.btn--green Signup
+          
+          
